@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Event Booking_login_page</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body class="overflow bg">
+  <section>
+      <div class="center">
+        <br>
+          <h3 class="grey-text text-darken-4">Welcome To Haappy Booking</h3>
+          <p class="brown-text text-darken-2"> Your only place to find the best Event Spaces.</p>
+
+          
+          <div class="trans">
+              <h3 class="center white-text light">Login Here</h3>
+            
+            <div class="row">
+                <form id="myForm" class="col s12" action="order_page.html">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="uname" type="text" class="validate" name="uname" required="" aria-required="true"  minlength="3" maxlength="21">
+                            <label for="uname" data-error="Enter a Name(2 < length < 20)" data-success="right" class="white-text">Name</label>
+                          </div>
+                    </div>
+                  <div class="row">
+                      <div class="input-field col s12">
+                        <input id="upassword" name="upassword" type="password" class="validate" required="" aria-required="true" minlength="5" maxlength="16">
+                        <label for="upassword" data-error="Password (7 < length < 21)" class="white-text">Password</label>
+                      </div>
+                    </div>
+                    
+                    <button class="btn btn_o btn-large hoverable waves-effect waves-light brown" type="submit" onsubmit="storeDate();">Login
+                        <i class="material-icons right">send</i>
+                      </button>
+                </form>
+
+                </div>
+              </div>
+            </div>
+        
+
+  </section>
+
+
+
+
+   <!-- jquery and materializecss -->
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+   <script src="main.js"></script>
+</body>
+</html>

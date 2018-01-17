@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Order Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <div class="section bg">
+    <h1 class="container section z-depth-5 center brown white-text" style="border-radius: 50%">Book Your Event Space.</h1>
+    <br>
+    <br>
+    <br>
+    <h2 class="container">Howdy
+      <span id="uname_o" class="light" style="text-transform: capitalize;"></span>
+      <span class="light">,</span>
+    </h2>
+    <br>
+    <hr class="container z-depth-3">
+    <div class="trans z-depth-5">
+      <div class="row center">
+        <form class="col s12" id="formD" action="booked.html">
+          <h4 class="white-text light">Order Here</h4>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="first_name" type="text" class="validate" name="first_name" required="" aria-required="true">
+              <label class="white-text" for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <input id="phone_number" type="tel" class="validate" name="phone_number" pattern="[1-9]{1}[0-9]{9}" required="" aria-required="true">
+              <label class="white-text" for="phone_number" data-error="mush be 10 digit" data-success="right">Phone Number</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="address" class="materialize-textarea" name="address"></textarea>
+              <label class="white-text" for="address">Address</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" name="email" type="email" class="validate" required="" aria-required="true">
+              <label class="white-text" for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <input type="date" id "booking_date" name="booking_date" class="datepicker">
+              <label class="white-text" for="booking_date">Booking Date</label>
+            </div>
+
+            <div>
+              <div class="input-field col s12 m6">
+                <input type="date" id "event_date" name="event_date" class="datepicker">
+                <label class="white-text" for="event_date">Event Date</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col white-text">
+              Package
+            </div>
+            <div class="col push-s3 push-m5">
+              <p>
+                <input class="with-gap" name="event" type="radio" id="lower" onclick="total_amount();" />
+                <label class="white-text" for="lower">Lower Event Space</label>
+              </p>
+              <p>
+                <input class="with-gap" name="event" type="radio" id="upper" onclick="total_amount();" />
+                <label class="white-text" for="upper">Upper Event Space</label>
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col s12">
+              <span class="white-text">Extra Rooms</span>
+              <div class="input-field inline">
+                <input id="rooms" type="number" class="validate" value=0 max="4" oninput="total_amount();">
+                <label for="rooms" data-error="Max 4 rooms" data-success="right">Extra Rooms</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s12">
+              <span class="white-text">Adavance Amount</span>
+              <div class="input-field inline">
+                <input id="advance" type="number" value=0 class="validate" min="2000" oninput="total_amount();">
+                <label for="advance" data-error="mininum 2000rs" data-success="right">Advance</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s12">
+              <span class="white-text">Balance Amount</span>
+              <div class="input-field inline">
+                <input id="balance" name="balance" type="number" class="validate" oninput="total_amount();" value=0>
+                <label for="balance" data-error="wrong" data-success="right">Balance</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s12">
+              <span class="white-text">Total</span>
+              <div class="input-field inline">
+                <input id="total" type="number" class="validate" value="0">
+                <label for="total" data-error="wrong" data-success="right">Total</label>
+              </div>
+            </div>
+          </div>
+          <button id="subForm" class="btn btn_o btn-large hoverable waves-effect trnsparent brown" type="submit">Login
+            <i class="material-icons right black-text">send</i>
+          </button>
+      </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  <!-- jquery and materializecss -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="main.js"></script>
+  <script type="text/javascript" src="sub.json"></script>
+</body>
+
+</html>

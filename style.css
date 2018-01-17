@@ -1,0 +1,22 @@
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.space{
+  height:300px;
+  width:300px;
+}
+.trans{
+  background-color:rgba(58, 37, 37, 0.623);
+  padding:5%;
+  margin:3% 10% 5% 10%;
+}
+.btn_o:hover{
+  background-color:rgba(58, 37, 37, 0.623) !important;
+}
+.bg{
+  background-image: url('image/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
